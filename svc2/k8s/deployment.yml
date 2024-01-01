@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svc-2
+  labels:
+    app: backend-two
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend-two
+  template:
+    metadata:
+      labels:
+        app: backend-two
+    spec:
+      containers:
+        - name: backend-two
+          image: shafikur/backend-two:3.0
+          ports:
+            - containerPort: 80

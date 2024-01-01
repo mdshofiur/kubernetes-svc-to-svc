@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svc-1
+  labels:
+    app: backend-one
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend-one
+  template:
+    metadata:
+      labels:
+        app: backend-one
+    spec:
+      containers:
+        - name: backend-one
+          image: shafikur/backend-one:3.0
+          ports:
+            - containerPort: 80
