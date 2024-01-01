@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: svc-2
+  name: svc-2-deployment
+  namespace: devops
   labels:
     app: backend-two
 spec:
@@ -19,3 +20,8 @@ spec:
           image: shafikur/backend-two:3.0
           ports:
             - containerPort: 80
+          env:
+            - name: PORT
+              value: "80"
+            - name: URL
+              value: http://backend-sv1-svc.default.svc.cluster.local

@@ -31,7 +31,7 @@ app.post('/api/svc', async (req: Request, res: Response) => {
 
    try {
       const response = await axios.post(
-         'http://backend-svc1-svc.devops.svc.cluster.local/api/hello',
+         'http://backend-svc1-svc.default.svc.cluster.local/api/hello',
          body,
       );
       console.log('response from service-2', response.data);
