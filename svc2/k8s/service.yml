@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service-2
+  name: backend-sv2-svc
   labels:
     app: backend-2
 spec:
   selector:
-    app: backend-2
+    app: backend-two
   ports:
     - name: http
       protocol: TCP

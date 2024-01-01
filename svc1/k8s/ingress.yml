@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+   name: backend-ingress-1
+   annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+   labels:
+      app: backend-1-ingress
+spec:
+    ingressClassName: nginx
+    rules:
+        - host: api.backendOne.com
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: backend-sv1-svc
+                        port:
+                          number: 80
