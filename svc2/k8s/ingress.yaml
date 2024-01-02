@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: api.backendTwo.com
+    - host: fr.poridhi.io
       http:
         paths:
           - path: /
