@@ -1,21 +1,31 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-   name: backend-ingress-1
-   annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /
-   labels:
-      app: backend-1-ingress
+  name: backend-ingress-1
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  labels:
+    app: backend-1-ingress
 spec:
-    ingressClassName: nginx
-    rules:
-        - host: api.poridhi.io
-          http:
-            paths:
-                - path: /
-                  pathType: Prefix
-                  backend:
-                    service:
-                        name: backend-sv1-svc
-                        port:
-                          number: 80
+  ingressClassName: nginx
+  rules:
+    - host: fr.poridhi.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-sv1-svc
+                port:
+                  number: 80
+    - host: api.poridhi.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-sv2-svc
+                port:
+                  number: 80
