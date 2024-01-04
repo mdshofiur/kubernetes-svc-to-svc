@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: svc-1-deployment
   labels:
-    app: backend-one
+    app: frontend-one
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backend-one
+      app: frontend-one
   template:
     metadata:
       labels:
-        app: backend-one
+        app: frontend-one
     spec:
       containers:
-        - name: backend-one
+        - name: frontend
           image: shafikur/backend-one:3.0
           ports:
             - containerPort: 80
