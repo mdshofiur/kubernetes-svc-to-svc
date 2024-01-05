@@ -15,6 +15,7 @@ app.use(router);
 app.get('/', (req: Request, res: Response) => {
    const headers = req.headers;
    const hostName = os.hostname();
+   console.log('Service-1');
    res.json({ hostName, headers });
 });
 
