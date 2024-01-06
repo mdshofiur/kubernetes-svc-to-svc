@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: svc-1-deployment
   labels:
-    app: frontend-one
+    app: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend-one
+      app: frontend
   template:
     metadata:
       labels:
-        app: frontend-one
+        app: frontend
     spec:
       containers:
         - name: frontend

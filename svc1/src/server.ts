@@ -30,7 +30,7 @@ app.post('/api/svc', async (req: Request, res: Response) => {
    const body = req.body;
    try {
       const response = await axios.post(
-         'http://backend-sv2-svc.devops.svc.cluster.local/api/hello',
+         'http://api.poridhi.io.devops.svc.cluster.local/api/hello',
          body,
       );
       console.log('response from service-1', response.data);

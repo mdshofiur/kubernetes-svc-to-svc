@@ -16,6 +16,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-sv1-svc
+                name: fr.poridhi.io
                 port:
                   number: 80

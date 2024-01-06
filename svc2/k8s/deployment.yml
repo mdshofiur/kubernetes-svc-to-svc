@@ -4,19 +4,19 @@ metadata:
   name: svc-2-deployment
   namespace: devops
   labels:
-    app: backend-two
+    app: backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backend-two
+      app: backend
   template:
     metadata:
       labels:
-        app: backend-two
+        app: backend
     spec:
       containers:
-        - name: backend-two
+        - name: backend
           image: shafikur/backend-two:3.0
           ports:
             - containerPort: 80
