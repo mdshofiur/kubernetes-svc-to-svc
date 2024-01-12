@@ -19,3 +19,13 @@ spec:
                 name: frontend-svc
                 port:
                   number: 80
+    - host: api.poridhi.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-sv2-svc
+                port:
+                  number: 80

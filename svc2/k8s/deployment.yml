@@ -23,5 +23,3 @@ spec:
           env:
             - name: PORT
               value: "80"
-            - name: URL
-              value: http://backend-sv1-svc.default.svc.cluster.local
